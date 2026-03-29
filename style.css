@@ -95,6 +95,38 @@ nav a:hover {
     }
 }
 
+/* ----- KONTAKT-SIDE SIDE-BY-SIDE LAYOUT ----- */
+
+.contact-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contact-image img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contact-text {
+    flex: 1;
+    font-size: 1.15rem;
+}
+
+/* Responsivt (mobilvennlig) */
+@media (max-width: 750px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-text {
+        text-align: center;
+    }
+}
 /* ----- SEKSJONER ----- */
 
 .section {
