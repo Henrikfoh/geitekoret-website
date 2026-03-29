@@ -95,7 +95,8 @@ nav a:hover {
     background-position: center;
     display: flex;
     align-items: center;        /* midtstiller vertikalt */
-    padding-left: 5%;           /* luft fra venstre */
+    padding-left: 0%;     
+     overflow: hidden; /* luft fra venstre */
     position: relative;
     color: white;
 }
