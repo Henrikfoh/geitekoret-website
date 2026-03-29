@@ -64,16 +64,35 @@ nav a:hover {
 
 .hero {
     width: 100%;
-    height: 3020px;
+    height: 450px;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;      /* midtstiller vertikalt */
+    padding-left: 5%;         /* litt luft inn fra venstre */
     color: white;
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-shadow: 0px 4px 15px rgba(0,0,0,0.7);
+    position: relative;
+}
+
+/* HERO-TEXTPANEL 30% VENSTRE */
+
+.hero-content {
+    width: 30%;               /* Tekstpanel bredde */
+    max-width: 400px;
+    background: rgba(0,0,0,0.45);   /* diskret mørk bakgrunn for lesbarhet */
+    padding: 20px 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(3px);     /* litt gloss-effekt */
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.hero-content p {
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 /* Hero-tekst skalerer på mindre skjermer */
@@ -211,5 +230,26 @@ footer {
     text-align: center;
     padding: 35px 20px;
     margin-top: 80px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding-left: 0;
+        justify-content: center; /* sentrer tekst på mobil */
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
 }
 ``
