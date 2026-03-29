@@ -86,7 +86,7 @@ nav a:hover {
 .hero-content h1 {
     margin: 0;
     font-weight: 700;
-    font-size: clamp(2rem, 4vw, 4rem); /* dynamisk stor tekst */
+    font-size: clamp(2.8rem, 8vw, 5.5rem);    
     line-height: 1.1;
     text-shadow: 0 0 10px rgba(0,0,0,0.65),
                  0 0 20px rgba(0,0,0,0.5),
