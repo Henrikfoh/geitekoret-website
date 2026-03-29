@@ -15,8 +15,8 @@ header {
     justify-content: space-between;   /* logo venstre, meny høyre */
     align-items: center;
     padding: 10px 30px;               /* mindre header */
-    background: #d45757;              /* snill rød farge */
-    color: white;
+    background: white;              /* snill rød farge */
+    color: black;
 }
 
 .header-left {
