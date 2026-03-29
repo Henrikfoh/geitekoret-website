@@ -101,8 +101,10 @@ nav a:hover {
 }
 
 .hero-content {
-    width: 35%;                 /* tekstområde = venstre 30% */
-    max-width: 450px;           
+    margin-left: 5%;
+    width: 40%;/* tekstområde = venstre 30% */
+    max-width: 450px;
+    box-sizing: border-box;
 }
 
 .hero-content h1 {
