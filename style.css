@@ -212,12 +212,7 @@ footer {
     margin-top: 80px;
 }
 
-@media (max-width: 900px) {
-    .hero {
-        padding-left: 0;
-        justify-content: center; /* sentrer tekst på mobil */
-        text-align: center;
-    }
+@media (max-width: 900px){
 
     .hero-content {
         width: 80%;
