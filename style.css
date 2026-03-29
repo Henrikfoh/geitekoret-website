@@ -100,8 +100,7 @@ nav a:hover {
 .tour-box {
     display: flex;
     gap: 30px;
-    padding: 25px;                  /* luft inni boksen */
-    border: 3px solid black;        /* sort ramme */
+    padding: 25px;                  /* luft inni boksen */       /* sort ramme */
     border-radius: 15px;            /* avrundede hjørner */
     align-items: center;
     background: none;               /* ingen bakgrunnsfarge */
