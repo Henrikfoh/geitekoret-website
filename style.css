@@ -95,6 +95,45 @@ nav a:hover {
     }
 }
 
+
+/* ------ TUR-BOKS SIDE-BY-SIDE LAYOUT ------ */
+
+.tour-box {
+    display: flex;
+    gap: 30px;
+    background: #000;             /* sort bakgrunn */
+    color: white;                 /* hvit tekst */
+    padding: 25px;
+    border-radius: 15px;          /* avrundede hjørner */
+    align-items: center;
+}
+
+.tour-image img {
+    width: 330px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.tour-text {
+    flex: 1;
+}
+
+.tour-text h2 {
+    margin-top: 0;
+}
+
+/* ------- Mobilvennlig: stable over hverandre ------- */
+
+@media (max-width: 800px) {
+    .tour-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tour-image img {
+        width: 100%;
+    }
+}
 /* ----- KONTAKT-SIDE SIDE-BY-SIDE LAYOUT ----- */
 
 .contact-container {
