@@ -8,11 +8,44 @@ body {
     line-height: 1.6;
 }
 
+/* ----- HEADER ----- */
+
 header {
-    padding: 10px;
-    background: Tomato;
+    display: flex;
+    justify-content: space-between;   /* logo venstre, meny høyre */
+    align-items: center;
+    padding: 10px 30px;               /* mindre header */
+    background: #d45757;              /* snill rød farge */
     color: white;
-    text-align: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;                        /* mellomrom mellom logo og navn */
+}
+
+.header-left img {
+    height: 45px;                     /* størrelse på logo */
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;                /* mindre og penere */
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    margin-left: 22px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.15rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 nav a {
