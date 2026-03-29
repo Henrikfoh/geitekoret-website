@@ -60,9 +60,27 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* ----- HERO-BILDET ----- */
+@media (max-width: 700px) {
+    header {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 
-/* --- HERO STIL --- */
+    header nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    .header-left img {
+        height: 35px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+}
 
 /* --- HERO STIL --- */
 
@@ -92,6 +110,39 @@ nav a:hover {
     text-shadow:
         0 0 6px rgba(0,0,0,0.35),
         0 0 12px rgba(0,0,0,0.30);
+}
+
+@media (max-width: 900px) {
+    .hero {
+        height: 45vh;
+        padding-left: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+        line-height: 1.15;
+    }
+}
+
+@media (max-width: 700px) {
+    .section {
+        padding: 0 20px;
+        margin: 40px auto;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
 }
 
 /* LIGHTBOX OVERLAY */
@@ -150,6 +201,25 @@ nav a:hover {
     }
 }
 
+@media (max-width: 750px) {
+    .tour-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .tour-image img {
+        width: 100%;
+    }
+
+    .tour-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
 /* ----- KONTAKT-SIDE SIDE-BY-SIDE LAYOUT ----- */
 
 .contact-container {
@@ -181,6 +251,11 @@ nav a:hover {
     .contact-text {
         text-align: center;
     }
+    
+    .contact-image img {
+        width: 100%;
+    }
+
 }
 /* ----- SEKSJONER ----- */
 
@@ -219,6 +294,18 @@ nav a:hover {
     transform: scale(1.03);
 }
 
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 /* ----- FOOTER ----- */
 
 footer {
@@ -227,6 +314,14 @@ footer {
     text-align: center;
     padding: 35px 20px;
     margin-top: 80px;
+}
+
+@media (max-width: 700px) {
+    footer {
+        padding: 20px 10px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 900px){
