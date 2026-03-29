@@ -94,7 +94,24 @@ nav a:hover {
         0 0 12px rgba(0,0,0,0.30);
 }
 
-/* ------ TUR-BOKS SIDE-BY-SIDE LAYOUT ------ */
+/* LIGHTBOX OVERLAY */
+.lightbox {
+    display: none;               /* skjult som standard */
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    cursor: zoom-out;
+}
 
 /* ------ TUR-BOKS MED SORT BORDER ------ */
 
