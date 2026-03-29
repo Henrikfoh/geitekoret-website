@@ -15,7 +15,7 @@ header {
     justify-content: space-between;   /* logo venstre, meny høyre */
     align-items: center;
     padding: 10px 30px;               /* mindre header */
-    background: #F6F6F6;             
+    background: #f6f6f6;             
     color: black;
 }
 
