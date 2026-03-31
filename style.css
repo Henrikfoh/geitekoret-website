@@ -159,7 +159,7 @@ nav a:hover {
     background-image: img/BG.png;
     background-size: cover;        /* gjør at bildet dekker hele området */
     background-position: center;   /* sentrerer bildet */
-    background-repeat: no-repeat;  /* hindrer gjentakelser *
+    background-repeat: no-repeat;  /* hindrer gjentakelser */
 
 }
 
