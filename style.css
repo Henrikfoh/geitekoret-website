@@ -281,6 +281,75 @@ nav a:hover {
     font-size: 1.15rem;
 }
 
+/* --- TOUR GRID --- */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.tour-card {
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: white;
+}
+
+.tour-card:hover {
+    transform: translateY(-4px);
+}
+
+.tour-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tour-card h3 {
+    margin: 12px 0 5px;
+}
+
+.tour-card p {
+    margin: 0;
+    color: #555;
+}
+
+/* --- OVERLAY --- */
+.tour-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.tour-overlay-content {
+    background: white;
+    max-width: 700px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 16px;
+    position: relative;
+    text-align: center;
+}
+
+.tour-overlay-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.tour-overlay-content .close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 /* ----- GALLERI ----- */
 
 .gallery {
