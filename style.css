@@ -151,51 +151,63 @@ nav a:hover {
     }
 }
 
-.insta-slider {
-    position: relative;
-    max-width: 550px;
-    margin: 0 auto 50px;
-    
+/* === INSTAGRAM + OM OSS SIDE-BY-SIDE === */
 
-
+.insta-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 }
 
-.insta-slide {
-    display: none;
+/* Venstreside */
+.insta-left {
+    flex: 1;
 }
 
-.insta-slide.active {
+/* Høyreside */
+.insta-right {
+    flex: 1;
+}
+
+/* Instagram-bildet halvert i størrelse */
+.insta-latest img {
+    width: 70%;                     /* ← ca halvparten av før */
+    border-radius: 12px;
     display: block;
+    margin: 0 auto;
 }
 
-.insta-prev, .insta-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+/* Navigasjonsknapper */
+.insta-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.insta-nav button {
     background: #d45757;
-    border: none;
     color: white;
-    font-size: 2rem;
-    padding: 5px 10px;
-    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
     border-radius: 8px;
+    cursor: pointer;
 }
 
-.insta-prev { left: -50px; }
-.insta-next { right: -50px; }
 
-@media (max-width: 700px) {
-    .insta-prev, .insta-next {
-        top: auto;
-        bottom: -45px;
-        font-size: 1.5rem;
-        left: 30%;
-        right: 30%;
-        transform: none;
+/* === MOBILVERSJON === */
+@media (max-width: 900px) {
+    .insta-wrapper {
+        flex-direction: column;
+        text-align: center;
     }
-    .insta-prev { left: 25%; }
-    .insta-next { right: 25%; }
+
+    .insta-latest img {
+        width: 90%;                 /* litt større på mobil */
+    }
 }
+``
 
 /* LIGHTBOX OVERLAY */
 .lightbox {
