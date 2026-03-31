@@ -155,6 +155,12 @@ nav a:hover {
     position: relative;
     max-width: 550px;
     margin: 0 auto 50px;
+    
+    background-image: img/BG.png;
+    background-size: cover;        /* gjør at bildet dekker hele området */
+    background-position: center;   /* sentrerer bildet */
+    background-repeat: no-repeat;  /* hindrer gjentakelser *
+
 }
 
 .insta-slide {
