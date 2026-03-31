@@ -213,48 +213,6 @@ nav a:hover {
     cursor: zoom-out;
 }
 
-/* --- TURBOKSER SIDE-BY-SIDE --- */
-
-.tour-box {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding: 25px;
-    border: 2px solid black;
-    border-radius: 14px;
-    background: none;
-}
-
-/* Bildet blir mindre og fast størrelse */
-.tour-image img {
-    width: 220px;         /* mindre bilde */
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-/* Tekst tar resten av plassen */
-.tour-text {
-    flex: 1;
-}
-
-.tour-text h2 {
-    margin-top: 0;
-}
-
-/* --- MOBILVERSJON --- */
-@media (max-width: 750px) {
-    .tour-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .tour-image img {
-        width: 100%;
-        max-width: 350px;
-    }
-}
-
 
 /* ----- KONTAKT-SIDE SIDE-BY-SIDE LAYOUT ----- */
 
@@ -276,6 +234,89 @@ nav a:hover {
     font-size: 1.15rem;
 }
 
+/* ========== LISTE MED TURER (SIDE-BY-SIDE) ========== */
+
+.tour-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tour-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 18px;
+    border: 2px solid black;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.tour-item img {
+    width: 150px;        /* ← lite bilde */
+    height: auto;
+    border-radius: 10px;
+}
+
+.tour-text h3 {
+    margin: 0;
+}
+
+.tour-text p {
+    margin: 5px 0 0 0;
+}
+
+
+/* ============= MOBIL ============= */
+@media (max-width: 750px) {
+    .tour-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tour-item img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* ========== OVERLAY ========== */
+
+.tour-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.tour-overlay-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.tour-overlay-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.tour-overlay-content .close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
 /* Responsivt (mobilvennlig) */
 @media (max-width: 750px) {
     .contact-container {
@@ -293,6 +334,7 @@ nav a:hover {
     }
 
 }
+
 /* ----- SEKSJONER ----- */
 
 .section {
