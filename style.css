@@ -151,6 +151,49 @@ nav a:hover {
     }
 }
 
+.insta-slider {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto 50px;
+}
+
+.insta-slide {
+    display: none;
+}
+
+.insta-slide.active {
+    display: block;
+}
+
+.insta-prev, .insta-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #d45757;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.insta-prev { left: -50px; }
+.insta-next { right: -50px; }
+
+@media (max-width: 700px) {
+    .insta-prev, .insta-next {
+        top: auto;
+        bottom: -45px;
+        font-size: 1.5rem;
+        left: 30%;
+        right: 30%;
+        transform: none;
+    }
+    .insta-prev { left: 25%; }
+    .insta-next { right: 25%; }
+}
+
 /* LIGHTBOX OVERLAY */
 .lightbox {
     display: none;               /* skjult som standard */
