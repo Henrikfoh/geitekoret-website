@@ -252,12 +252,12 @@ nav a:hover {
     border: 3px solid black;      /* TYDELIG RAMME */
     border-radius: 12px;
     cursor: pointer;
-    background: white;            /* gjør rammen tydeligere */
+    background: begie            /* gjør rammen tydeligere */
 }
 
 /* BILDESTØRRELSE - LITE, FAST FORMAT */
 .tour-item img {
-    width: 140px;                 /* ← mindre og fast */
+    width: 240px;                 /* ← mindre og fast */
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -270,6 +270,7 @@ nav a:hover {
 
 .tour-text h3 {
     margin: 0;
+    text-size: 30;
 }
 
 .tour-text p {
