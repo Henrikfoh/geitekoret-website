@@ -21,26 +21,82 @@
         <a href="kontakt.html">Kontakt oss</a>
     </nav>
 </header>
-<div class="section tour-box">
+<section class="section">
+    <h2>Kommende turer</h2>
+
+    <div class="tour-grid">
+        <div class="tour-card"
+             data-title="Jotunheimen 2026"
+             data-image="img/jotunheimen-2026.jpg"
+             data-description="Sommeren 2026 planlegger vi ny fjellturné i Jotunheimen. Det blir vandring, konserter på hytter og sterkt fellesskap over flere dager. Mer detaljer kommer.">
+            
+            <img src="img/jotunheimen-2026.jpg" alt="Jotunheimen 2026">
+            <h3>Jotunheimen 2026</h3>
+            <p>Kommende fjellturné</p>
+        </div>
+    </div>
+</section>
+
+    <section class="section">
+    <h2>Tidligere turer</h2>
+
+    <div class="tour-grid">
+        <div class="tour-card"
+             data-title="Jotunheimen 2025"
+             data-image="img/GK2025-1.jpg"
+             data-description="Vår aller første fjellturné! Turen gikk via Gjendesheim, Glitterheim, Spiterstulen, Leirvassbu, Gjendebu og Bygdin Høifjeldshotel. 11.–16. juli 2025.">
+
+            <img src="img/GK2025-1.jpg" alt="Jotunheimen 2025">
+            <h3>Jotunheimen 2025</h3>
+            <p>Fjellturné</p>
+        </div>
+    </div>
+</section>
     
-    <div class="tour-image">
-        <img src="img/GK2025-1.jpg" alt="Jotunheimen 2025">
-    </div>
-
-    <div class="tour-text">
-        <h2>Jotunheimen 2025</h2>
-        <p>
-            Vår aller første fjellturné! Turen gikk innom Gjendesheim, Glitterheim, Spiterstulen,
-            Leirvassbu, Gjendebu og Bygdin Høifjeldshotel. Turen gikk fra 11. – 16. juli 2025.
-        </p>
-    </div>
-
-</div>
 
 <footer>
-    <p>Geitekoret • <strong>Instagram:</strong> <a href="https://www.instagram.com/nidarosgeitekor/" style=color: white;>nidarosgeitekor</a> • <strong>Epost:</strong>henrikfoh@gmail.com</p>
+    <p>Geitekoret • <strong>Instagram:</strong> <a href="https://www.instagram.com/nidarosgeitekor/" style= "color:white";>nidarosgeitekor</a> • <strong>Epost:</strong>henrikfoh@gmail.com</p>
 </footer>
 
+<!-- Overlay -->
+<div id="tour-overlay" class="tour-overlay">
+    <div class="tour-overlay-content">
+        <span class="close">&times;</span>
+        <img id="overlay-image" src="">
+        <h2 id="overlay-title"></h2>
+        <p id="overlay-description"></p>
+    </div>
+</div>
+
+<!-- JavaScript – KUN DENNE -->
+<script>
+const cards = document.querySelectorAll('.tour-card');
+const overlay = document.getElementById('tour-overlay');
+const title = document.getElementById('overlay-title');
+const image = document.getElementById('overlay-image');
+const description = document.getElementById('overlay-description');
+const closeBtn = document.querySelector('.close');
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        title.textContent = card.dataset.title;
+        image.src = card.dataset.image;
+        description.textContent = card.dataset.description;
+        overlay.style.display = 'flex';
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+});
+
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        overlay.style.display = 'none';
+    }
+});
+</script>
+    
 </body>
 </html>
 ``
