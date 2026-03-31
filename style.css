@@ -352,9 +352,7 @@ nav a:hover {
     max-width: 1000px;
     margin: 60px auto;   /* større marger */
     padding: 0 40px;     /* bredere sidemargin */
-    background-image: url("img/BG3.png"); 
-    background-size: cover;        /* gjør at bildet dekker hele området */
-    background-position: center;/* gjør rammen tydeligere */
+/* gjør rammen tydeligere */
 }
 
 .section h2 {
