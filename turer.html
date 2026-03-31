@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8" />
-    <title>Nidaos Geitekor – Turer</title>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <meta charset="UTF-8">
+    <title>Nidaros Geitekor – Turer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- =============== HEADER =============== -->
 <header>
     <div class="header-left">
-        <img src="img/logo.png" alt="Logo">
-        <h1>Nidaos Geitekor</h1>
+        <img src="img/logo.png" alt="logo">
+        <h1>Nidaros Geitekor</h1>
     </div>
 
     <nav>
         <a href="index.html">Hjem</a>
         <a href="turer.html">Turer</a>
-        <a href="kontakt.html">Kontakt oss</a>
+        <a href="kontakt.html">Kontakt</a>
     </nav>
 </header>
 
 
-
-<!-- ================= KOMMENDE TURER ================= -->
+<!-- =============== KOMMENDE TURER =============== -->
 <section class="section">
     <h2>Kommende turer</h2>
 
-    <div class="tour-grid">
+    <div class="tour-list">
 
-        <!-- KOMMENDE TUR: 2026 -->
-        <div class="tour-card"
+        <!-- TUR 2026 -->
+        <div class="tour-item"
              data-title="Jotunheimen 2026"
-             data-image="img/GK2025-5.jpg"
-             data-description="Sommeren 2026 planlegger vi en ny fjellturné i Jotunheimen. Det blir vandring, konserter på fjellhytter og sterkt fellesskap. Mer detaljer kommer.">
+             data-image="img/jotunheimen-2026.jpg"
+             data-description="Sommeren 2026 planlegger vi en ny fjellturné i Jotunheimen. Det blir vandring, konserter på fjellhytter og sterkt fellesskap. Mer informasjon kommer.">
 
-            <img src="img/GK2025-5.jpg" alt="Jotunheimen 2026">
-            <h3>Jotunheimen 2026</h3>
-            <p>Kommende fjellturné</p>
+            <img src="img/jotunheimen-2026.jpg" alt="Jotunheimen 2026">
+            
+            <div class="tour-text">
+                <h3>Jotunheimen 2026</h3>
+                <p>Kommende fjelltur</p>
+            </div>
         </div>
 
     </div>
@@ -51,35 +48,36 @@
 
 
 
-<!-- ================= TIDLIGERE TURER ================= -->
+<!-- =============== TIDLIGERE TURER =============== -->
 <section class="section">
     <h2>Tidligere turer</h2>
 
-    <div class="tour-grid">
+    <div class="tour-list">
 
-        <!-- TIDLIGERE TUR 2025 -->
-        <div class="tour-card"
+        <!-- TUR 2025 -->
+        <div class="tour-item"
              data-title="Jotunheimen 2025"
              data-image="img/GK2025-1.jpg"
-             data-description="Vår aller første fjellturné! Turen gikk innom Gjendesheim, Glitterheim, Spiterstulen, Leirvassbu, Gjendebu og Bygdin Høifjeldshotel. Turen gikk fra 11.–16. juli 2025.">
+             data-description="Vår aller første fjellturné! Turen gikk via Gjendesheim, Glitterheim, Spiterstulen, Leirvassbu, Gjendebu og Bygdin Høifjeldshotel. 11.–16. juli 2025.">
 
             <img src="img/GK2025-1.jpg" alt="Jotunheimen 2025">
-            <h3>Jotunheimen 2025</h3>
-            <p>Fjellturné</p>
+            
+            <div class="tour-text">
+                <h3>Jotunheimen 2025</h3>
+                <p>Fjellturné</p>
+            </div>
         </div>
-
-        <!-- Du kan kopiere og lime inn flere tur-card her -->
 
     </div>
 </section>
 
-<!-- ================= TURBOX (side-by-side) — valgfritt ================= -->
-    <div class="section tour-box">
-        <div class="tour-image">
-            <img src="img/GK2025-1.jpg>
+
+
+<!-- =============== OVERLAY =============== -->
 <div id="tour-overlay" class="tour-overlay">
     <div class="tour-overlay-content">
         <span class="close">&times;</span>
+
         <img id="overlay-image" src="" alt="">
         <h2 id="overlay-title"></h2>
         <p id="overlay-description"></p>
@@ -88,42 +86,38 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =============== FOOTER =============== -->
 <footer>
-    <p>Nidaos Geitekor • Trondheim • kontakt@nidaosgeitekor.no</p>
+    <p>Nidaros Geitekor • Trondheim • kontakt@nidarosgeitekor.no</p>
 </footer>
 
 
 
-<!-- ================= JAVASCRIPT (overlay) ================= -->
+<!-- =============== JAVASCRIPT =============== -->
 <script>
-const cards = document.querySelectorAll('.tour-card');
+const items = document.querySelectorAll('.tour-item');
 const overlay = document.getElementById('tour-overlay');
-const title = document.getElementById('overlay-title');
-const image = document.getElementById('overlay-image');
-const description = document.getElementById('overlay-description');
+const overlayTitle = document.getElementById('overlay-title');
+const overlayImage = document.getElementById('overlay-image');
+const overlayDescription = document.getElementById('overlay-description');
 const closeBtn = document.querySelector('.close');
 
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        title.textContent = card.dataset.title;
-        image.src = card.dataset.image;
-        description.textContent = card.dataset.description;
+// Åpne overlay
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        overlayTitle.textContent = item.dataset.title;
+        overlayImage.src = item.dataset.image;
+        overlayDescription.textContent = item.dataset.description;
         overlay.style.display = 'flex';
     });
 });
 
-closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
-});
-
+// Lukk overlay
+closeBtn.addEventListener('click', () => overlay.style.display = 'none');
 overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-        overlay.style.display = 'none';
-    }
+    if (e.target === overlay) overlay.style.display = 'none';
 });
 </script>
 
 </body>
 </html>
-''
