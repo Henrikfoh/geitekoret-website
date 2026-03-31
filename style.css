@@ -270,7 +270,7 @@ nav a:hover {
 
 .tour-text h3 {
     margin: 0;
-    text-size: 30;
+    font-size: 1.2rem; 
 }
 
 .tour-text p {
