@@ -170,24 +170,27 @@ nav a:hover {
     cursor: zoom-out;
 }
 
-/* ------ TUR-BOKS MED SORT BORDER ------ */
+/* --- TURBOKSER SIDE-BY-SIDE --- */
 
 .tour-box {
     display: flex;
-    gap: 30px;
-    padding: 25px;                  /* luft inni boksen */       /* sort ramme */
-    border-radius: 15px;            /* avrundede hjørner */
     align-items: center;
-    background: none;               /* ingen bakgrunnsfarge */
-    color: inherit;                 /* bruk vanlig tekstfarge */
+    gap: 25px;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 14px;
+    background: none;
 }
 
+/* Bildet blir mindre og fast størrelse */
 .tour-image img {
-    width: 330px;
-    max-width: 100%;
+    width: 220px;         /* mindre bilde */
+    height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
+/* Tekst tar resten av plassen */
 .tour-text {
     flex: 1;
 }
@@ -196,34 +199,18 @@ nav a:hover {
     margin-top: 0;
 }
 
-/* Mobil: stable alt */
-@media (max-width: 800px) {
-    .tour-box {
-        flex-direction: column;
-        text-align: center;
-    }
-    .tour-image img {
-        width: 100%;
-    }
-}
-
+/* --- MOBILVERSJON --- */
 @media (max-width: 750px) {
     .tour-box {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
     }
 
     .tour-image img {
         width: 100%;
-    }
-
-    .tour-text h2 {
-        font-size: 1.5rem;
+        max-width: 350px;
     }
 }
-
-
 
 
 /* ----- KONTAKT-SIDE SIDE-BY-SIDE LAYOUT ----- */
