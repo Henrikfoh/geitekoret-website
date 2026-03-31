@@ -156,7 +156,7 @@ nav a:hover {
     max-width: 550px;
     margin: 0 auto 50px;
     
-    background-image: img/BG2.png;
+    background-image: url("img/BG2.png");
     background-size: cover;        /* gjør at bildet dekker hele området */
     background-position: center;   /* sentrerer bildet */
     background-repeat: no-repeat;  /* hindrer gjentakelser */
@@ -258,7 +258,7 @@ nav a:hover {
     border: 3px solid black;      /* TYDELIG RAMME */
     border-radius: 12px;
     cursor: pointer;
-    background-image: img/BG2.png; 
+    background-image: url("img/BG2.png"); 
     background-size: cover;        /* gjør at bildet dekker hele området */
     background-position: center;/* gjør rammen tydeligere */
 }
