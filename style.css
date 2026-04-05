@@ -465,3 +465,17 @@ footer {
     }
 
 }
+
+/* === SCROLL-IN ANIMASJON (OM OSS) === */
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-60px); /* starter litt utenfor bildet */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Når elementet blir synlig */
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
