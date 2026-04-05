@@ -410,6 +410,36 @@ nav a:hover {
     }
 }
 
+/* === GALLERY OVERLAY === */
+
+#gallery-overlay {
+    position: fixed;                 /* VIKTIG: dekker hele skjermen */
+    inset: 0;                        /* top/right/bottom/left = 0 */
+    background: rgba(0,0,0,0.9);
+    display: none;                   /* skjult som standard */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;                  /* over ALT annet */
+}
+
+#gallery-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
+#gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+
 /* ----- FOOTER ----- */
 
 footer {
@@ -435,4 +465,3 @@ footer {
     }
 
 }
-``
