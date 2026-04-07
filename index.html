@@ -98,24 +98,37 @@
 
 
 <script>
-  // Finn galleribilder
-  const galleryImages = document.querySelectorAll('.gallery img');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
+const galleryImages = document.querySelectorAll('.gallery img');
+const overlay = document.getElementById('gallery-overlay');
+const overlayImg = document.getElementById('gallery-overlay-img');
+const closeBtn = document.getElementById('gallery-close');
 
-  galleryImages.forEach(img => {
+galleryImages.forEach(img => {
     img.addEventListener('click', () => {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = img.src;
+        overlayImg.src = img.src;
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // stopper scrolling
     });
-  });
+});
 
-  // Klikk for å lukke
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
+function closeOverlay() {
+    overlay.style.display = 'none';
+    overlayImg.src = '';
+    document.body.style.overflow = '';
+}
+
+closeBtn.addEventListener('click', closeOverlay);
+
+// Klikk utenfor bildet lukker overlay
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        closeOverlay();
+    }
+});
 </script>
 
+
+ 
 <script>
 const slides = document.querySelectorAll('.insta-slide');
 let index = 0;
